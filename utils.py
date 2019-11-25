@@ -11,7 +11,7 @@ def get_it():
         pages.append({
             "filename": html_file,
             "title": name_only,
-            "output": file_name,
+            "output": "docs/" + file_name,
             "file_name": file_name
         })
 
@@ -49,6 +49,7 @@ def main():
     for page in pages:
         page_filename = page["filename"]
         page_output = page["output"]
+        page_file_name = page["file_name"]
         page_html = open(page_filename).read()
         template_html = open("templates/base.html").read()
         template = Template(template_html)
@@ -57,7 +58,7 @@ def main():
                     content=page_html,
                     some_page_link=page_links,
         )
-        score = open(page_output, "w+").write(shoot)
+        score = open(page_file_name, "w+").write(shoot)
     return score
 
 
