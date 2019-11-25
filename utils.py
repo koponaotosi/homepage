@@ -11,7 +11,7 @@ def get_it():
         pages.append({
             "filename": html_file,
             "title": name_only,
-            "output": "docs/" + file_name,
+            "output": file_name,
             "file_name": file_name
         })
 
