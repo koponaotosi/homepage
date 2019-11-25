@@ -34,7 +34,7 @@ def template():
 page_links = []
 def page_linkage():
     for page in pages:
-        page_links.append('<li><a href="file:///home/kotosi/Downloads/homepage-master/homepage/' + page["output"] + '">' + page["title"] + '</a></li>')
+        page_links.append('<li><a href="' + page["file_name"] + '">' + page["title"] + '</a></li>')
 
 #glue
 def main():
